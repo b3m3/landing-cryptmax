@@ -1,8 +1,11 @@
 $container: rem(1300);
-$ff: '';
-$fw: 400;
+$ff: 'DMSans';
+$fw: 700;
 $bg: #fff;
 $mc: #000;
+$grey: #888888;
+$green: #45B26B;
+$blue: #3772FF;
 
 html {scroll-behavior: smooth; font-size: 100%;}
 body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
@@ -15,3 +18,8 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
 
 //-----------------------------------------------------------------------
 
+.title {
+  font-size: 40px;
+  line-height: 52px;
+  color: #000000;
+}
