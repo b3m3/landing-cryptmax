@@ -23,7 +23,7 @@
       @include laptop {display: none;}
     }
     @include laptop {padding: 0;}
-    @include mq(600px) {grid-template: auto auto / auto 1fr auto auto;}
+    @include mq(rem(600)) {grid-template: auto auto / auto 1fr auto auto;}
   }
   &__menu {
     max-width: rem(340);
@@ -39,10 +39,10 @@
     display: flex;
     align-items: center;
     @include laptop {min-width: unset;}
-    @include mq(600px) {grid-row: 2 / 3; grid-column: 1 / 5;}
+    @include mq(rem(600)) {grid-row: 2 / 3; grid-column: 1 / 5;}
   }
   &__burger {
-    @include mq(600px) {grid-column: 3 / 5;}
+    @include mq(rem(600)) {grid-column: 3 / 5;}
   }
 }
 

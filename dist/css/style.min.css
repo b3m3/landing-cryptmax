@@ -474,7 +474,7 @@ body {
     padding: 0;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .header__main {
     grid-template: auto auto/auto 1fr auto auto;
   }
@@ -502,13 +502,13 @@ body {
     min-width: unset;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .header__search {
     grid-row: 2/3;
     grid-column: 1/5;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .header__burger {
     grid-column: 3/5;
   }
