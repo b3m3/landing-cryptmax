@@ -75,15 +75,15 @@ h1, h2, h3, h4, h5, h6 {
 @font-face {
   font-family: "DMSans";
   font-display: swap;
-  src: url("../fonts/DMSans-Bold.woff2") format("woff2"), url("../fonts/DMSans-Bold.woff") format("woff"), url("../fonts/DMSans-Bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/DMSans-Medium.woff2") format("woff2"), url("../fonts/DMSans-Medium.woff") format("woff"), url("../fonts/DMSans-Medium.ttf") format("ttf");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "DMSans";
   font-display: swap;
-  src: url("../fonts/DMSans-Medium.woff2") format("woff2"), url("../fonts/DMSans-Medium.woff") format("woff"), url("../fonts/DMSans-Medium.ttf") format("ttf");
-  font-weight: 500;
+  src: url("../fonts/DMSans-Bold.woff2") format("woff2"), url("../fonts/DMSans-Bold.woff") format("woff"), url("../fonts/DMSans-Bold.ttf") format("ttf");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
