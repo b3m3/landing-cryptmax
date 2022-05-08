@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .icon-f:before {
   content: "\e90e";
-  color: #fff;
+  color: #888;
 }
 
 .icon-dots:before {

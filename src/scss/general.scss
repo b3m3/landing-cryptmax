@@ -35,7 +35,6 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
   @include pc { &:hover {& img {transform: rotate(15deg);}}}
 }
 
-
 .title {
   @include fit ('font-size', 40, 30, 1);
   @include fit ('line-height', 52, 32, 1);
