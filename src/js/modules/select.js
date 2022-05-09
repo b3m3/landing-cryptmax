@@ -1,6 +1,6 @@
-const select = () => {
-  const btn = document.querySelector('.header-best__select-btn');
-  const items = document.querySelectorAll('.header-best__select-item');
+const select = (button, elements) => {
+  const btn = document.querySelector(button);
+  const items = document.querySelectorAll(elements);
 
   btn.addEventListener('click', () => btn.classList.toggle('active'));
 
