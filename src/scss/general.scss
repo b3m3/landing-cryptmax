@@ -14,7 +14,7 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
 .container {max-width: $container;margin: 0 auto;padding: 0 rem(15);}
 
 .ibg {width: 100%;height: 100%;object-fit: cover;}
-.ibga {position: relative;& img {position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: contain;}}
+.ibga {position: relative;& img {position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}}
 
 //-----------------------------------------------------------------------
 
@@ -67,4 +67,14 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
     z-index: 2;
   }
   @include pc { &:hover {&::after {width: 100%; opacity: 1;}}};
+}
+
+img {
+  cursor: pointer;
+  transition: .3s ease-out;
+  @include pc {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }

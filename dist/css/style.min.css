@@ -371,7 +371,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .logo > a {
@@ -439,6 +439,16 @@ body {
   .btn:hover::after {
     width: 100%;
     opacity: 1;
+  }
+}
+
+img {
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+@media (any-hover: hover) {
+  img:hover {
+    transform: scale(1.05);
   }
 }
 
@@ -706,6 +716,83 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+/* featured */
+.featured__main {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: grid;
+  gap: 30px;
+  grid-template: minmax(12.5rem, 1fr)/repeat(3, minmax(auto, 16.875rem)) minmax(auto, 15.4375rem);
+}
+@media (max-width: 1170px) {
+  .featured__main {
+    margin-top: calc(50px + 50 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .featured__main {
+    margin-bottom: calc(50px + 50 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .featured__main {
+    gap: calc(20px + 10 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 767px) {
+  .featured__main {
+    grid-template: auto minmax(12.5rem, 1fr)/repeat(3, minmax(auto, 16.875rem));
+  }
+}
+@media (max-width: 425px) {
+  .featured__main {
+    grid-template: auto repeat(3, minmax(12.5rem, 1fr))/1fr;
+  }
+}
+.featured__image {
+  border-radius: 0.9375rem;
+  overflow: hidden;
+}
+.featured__info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.125rem;
+}
+@media (max-width: 767px) {
+  .featured__info {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .featured__info {
+    grid-column: unset;
+  }
+}
+
+.info-featured__title {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 45px;
+}
+@media (max-width: 1170px) {
+  .info-featured__title {
+    font-size: calc(22px + 8 * ((100vw - 320px) / 850));
+  }
+}
+@media (max-width: 1170px) {
+  .info-featured__title {
+    line-height: calc(32px + 13 * ((100vw - 320px) / 850));
+  }
+}
+.info-featured__btn {
+  padding: 0.625rem 1.3125rem;
 }
 
 /* footer */
