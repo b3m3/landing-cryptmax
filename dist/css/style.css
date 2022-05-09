@@ -795,6 +795,91 @@ img {
   padding: 0.625rem 1.3125rem;
 }
 
+/* best */
+.best__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.25rem;
+}
+.header-best__select {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 250px;
+  border: 1.5px solid #CCCCCC;
+  border-radius: 0.4375rem;
+  padding: 0 0.4375rem 0 0.9375rem;
+}
+@media (max-width: 1170px) {
+  .header-best__select {
+    width: calc(120px + 130 * ((100vw - 320px) / 850));
+  }
+}
+.header-best__select-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  background-color: transparent;
+}
+.header-best__select-btn span:last-child {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  border-radius: 50%;
+  background-color: #3772FF;
+}
+.header-best__select-btn span:last-child::before {
+  position: absolute;
+  content: "";
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  transform: rotate(45deg) translate(-1px, -1px);
+  transition: 0.3s ease;
+}
+.header-best__select-btn.active + .header-best__select-list {
+  visibility: inherit;
+  pointer-events: auto;
+  padding: 0.9375rem;
+  height: 7.8125rem;
+}
+.header-best__select-btn.active span:last-child::before {
+  transform: rotate(-135deg) translate(-1px, -1px);
+}
+.header-best__select-list {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 110%;
+  border: 1.5px solid #CCCCCC;
+  background-color: #fff;
+  border-radius: 0.4375rem;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.4s ease;
+}
+.header-best__select-item {
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  transition: 0.3s ease;
+}
+.header-best__select-item:hover {
+  color: rgb(141, 141, 141);
+}
+
 /* footer */
 .footer__body {
   position: relative;

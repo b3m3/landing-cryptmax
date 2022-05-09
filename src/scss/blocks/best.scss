@@ -1,0 +1,101 @@
+.best {
+  &__main {}
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: rem(52);
+  }
+  &__slider {}
+  &__slider-wrapp {}
+  &__slider-item {}
+  &__slider-arrow {
+    &_prev {}
+    &_newxt {}
+  }
+}
+
+.header-best {
+  &__select {
+    position: relative;
+    display: flex;
+    height: 100%;
+    @include fit('width', 250, 120, 1);
+    border: 1.5px solid #CCCCCC;
+    border-radius: rem(7);
+    padding: 0 rem(7) 0 rem(15);
+  }
+  &__select-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: rem(18);
+    background-color: transparent;
+    & span:last-child {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(35);
+      height: rem(35);
+      border-radius: 50%;
+      background-color: $blue;
+
+      &::before {
+        position: absolute;
+        content: '';
+        @include arrow(down, #fff, 2px, 3px);
+        transform: rotate(45deg) translate(-1px, -1px);
+        transition: .3s ease;
+      }
+    }
+    &.active + .header-best__select-list {
+      visibility: inherit;
+      pointer-events: auto;
+      padding: rem(15);
+      height: rem(125);
+    }
+    &.active span:last-child::before {
+      transform: rotate(-135deg) translate(-1px, -1px);
+    }
+  }
+  &__select-list {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 110%;
+    border: 1.5px solid #CCCCCC;
+    background-color: #fff;
+    border-radius: rem(7);
+    visibility: hidden;
+    pointer-events: none;
+    transition: .4s ease;
+  }
+  &__select-item {
+    cursor: pointer;
+    font-size: rem(14);
+    line-height: rem(24);
+    transition: .3s ease;
+    &:hover {
+      color: rgb(141, 141, 141);
+    }
+  }
+}
+
+.item-best {
+  &__top {}
+  &__body {}
+  &__body-name {}
+  &__body-row {}
+  &__body-link1 {}
+  &__body-link2 {}
+  &__body-link3 {}
+  &__body-number {}
+  &__bottom {}
+  &__bottom-btn {}
+}
