@@ -1,0 +1,104 @@
+.intro {
+  &__main {
+    margin: rem(149) 0 0 0;
+    display: grid;
+    align-items: center;
+    @include fit('grid-column-gap', 91, 30, 1);
+    grid-template: minmax(rem(670), 1fr) / minmax(auto, rem(580)) minmax(auto, rem(500));
+    @include laptop {
+      grid-row-gap: rem(30);
+      grid-template: minmax(auto, rem(300)) auto / 1fr;
+    }
+    @include tablet {
+      text-align: center;
+    }
+  }
+  &__image {
+    position: relative;
+    height: 100%;
+    @include laptop {
+      grid-row: 1 / 2;
+    }
+  }
+}
+
+.info-intro {
+  &__subtitle {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: rem(21);
+    color: $grey;
+  }
+  &__title {
+    font-family: 'Poppins';
+    font-weight: 600;
+    @include fit('font-size', 55, 29, 1);
+    @include fit('line-height', 82, 36, 1);
+  }
+  &__btn {
+    @include fit('margin-bottom', 57, 20, 1);
+    margin-top: rem(18);
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: rem(21);
+    padding: rem(14) rem(26);
+    & span:last-child {
+      font-size: rem(11);
+    }
+  }
+  &__fact {
+    display: flex;
+    align-items: start;
+    @include fit('gap', 65, 30, 1);
+    text-align: center;
+    @include tablet {
+      justify-content: center;
+    }
+  }
+  &__fact-number {
+    font-weight: 700;
+    @include fit('font-size', 50, 30, 1);
+    @include fit('line-height', 123, 80, 1);
+  }
+  &__fact-label {
+    color: $grey;
+  }
+}
+
+.image-intro {
+  &__big {
+    overflow: hidden;
+    border-radius: rem(20);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__play {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: rem(-50);
+    transform: translate(0, -50%);
+    width: rem(100);
+    height: rem(100);
+    background-color: rgba(55, 115, 255, .47);
+    border-radius: 50%;
+    & span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: rem(20);
+    }
+    @include laptop {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
