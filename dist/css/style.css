@@ -1314,6 +1314,7 @@ img {
   }
 }
 .item-explore__top-icon {
+  cursor: pointer;
   position: absolute;
   top: 0.9375rem;
   right: 0.9375rem;
@@ -1402,9 +1403,6 @@ img {
   font-weight: 400;
   font-size: 0.8125rem;
   line-height: 1.0625rem;
-  color: #666666;
-}
-.item-explore__body-icon {
   color: #666666;
 }
 .item-explore__body-text {

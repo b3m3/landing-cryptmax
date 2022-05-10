@@ -81,6 +81,7 @@
     }
   }
   &__top-icon {
+    cursor: pointer;
     position: absolute;
     top: rem(15);
     right: rem(15);
@@ -173,9 +174,6 @@
     font-weight: 400;
     font-size: rem(13);
     line-height: rem(17);
-    color: #666666;
-  }
-  &__body-icon {
     color: #666666;
   }
   &__body-text {
