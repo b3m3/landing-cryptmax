@@ -17,6 +17,7 @@
     user-select: none;
   }
   &__arrow {
+    cursor: pointer;
     position: absolute;
     z-index: 2;
     display: flex;
@@ -146,6 +147,9 @@
     height: rem(80);
     border-radius: 50%;
     overflow: hidden;
+    & img {
+      border-radius: 50%;
+    }
   }
   &__body {
     background-color: #F3F4F5;

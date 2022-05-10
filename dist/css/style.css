@@ -87,16 +87,16 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 @font-face {
-  font-family: "icomoon";
+  font-family: "DMSans";
   font-display: swap;
-  src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("ttf");
+  src: url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff"), url("../fonts/DMSans-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "DMSans";
+  font-family: "icomoon";
   font-display: swap;
-  src: url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff"), url("../fonts/DMSans-Regular.ttf") format("ttf");
+  src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -989,6 +989,7 @@ img {
   user-select: none;
 }
 .best__arrow {
+  cursor: pointer;
   position: absolute;
   z-index: 2;
   display: flex;
@@ -1120,6 +1121,9 @@ img {
   height: 5rem;
   border-radius: 50%;
   overflow: hidden;
+}
+.item-best__top img {
+  border-radius: 50%;
 }
 .item-best__body {
   background-color: #F3F4F5;
