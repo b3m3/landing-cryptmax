@@ -1,7 +1,7 @@
 .featured {
   &__main {
     @include fit('margin-top', 100, 50, 1);
-    @include fit('margin-bottom', 100, 50, 1);
+    @include fit('margin-bottom', 100, 0, 1);
     display: grid;
     @include fit('gap', 30, 20, 1);
     grid-template: minmax(rem(200), 1fr) / repeat(3, minmax(auto, rem(270))) minmax(auto, rem(247));

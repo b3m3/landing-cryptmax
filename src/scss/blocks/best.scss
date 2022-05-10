@@ -3,7 +3,7 @@
   &__main {
     position: relative;
     @include fit('padding-top', 100, 50, 1);
-    @include fit('padding-bottom', 100, 50, 1);
+    @include fit('padding-bottom', 100, 0, 1);
   }
   &__header {
     display: flex;
