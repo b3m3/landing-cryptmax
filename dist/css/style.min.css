@@ -80,20 +80,6 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 @font-face {
-  font-family: "DMSans";
-  font-display: swap;
-  src: url("../fonts/DMSans-Bold.woff2") format("woff2"), url("../fonts/DMSans-Bold.woff") format("woff"), url("../fonts/DMSans-Bold.ttf") format("ttf");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "DMSans";
-  font-display: swap;
-  src: url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff"), url("../fonts/DMSans-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "icomoon";
   font-display: swap;
   src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("ttf");
@@ -119,6 +105,20 @@ h1, h2, h3, h4, h5, h6 {
   font-display: swap;
   src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff"), url("../fonts/Poppins-SemiBold.ttf") format("ttf");
   font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DMSans";
+  font-display: swap;
+  src: url("../fonts/DMSans-Bold.woff2") format("woff2"), url("../fonts/DMSans-Bold.woff") format("woff"), url("../fonts/DMSans-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DMSans";
+  font-display: swap;
+  src: url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff"), url("../fonts/DMSans-Regular.ttf") format("ttf");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -324,6 +324,42 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1024px) and (max-width: 600px) {
   .menu {
     top: 7.5rem;
+  }
+}
+
+.accordion {
+  pointer-events: none;
+}
+@media (max-width: 425px) {
+  .accordion {
+    position: relative;
+    pointer-events: all;
+  }
+  .accordion::before {
+    position: absolute;
+    content: "";
+    right: 0rem;
+    top: 0.625rem;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: 0.4s ease-out;
+  }
+  .accordion.active-accordion::before {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+}
+
+.accordion-content {
+  transition: 0.5s ease;
+}
+@media (max-width: 425px) {
+  .accordion-content {
+    overflow: hidden;
   }
 }
 
@@ -534,19 +570,19 @@ body {
 
 @keyframes anim-intro-img {
   0% {
-    transform: scale(2) translate(-2.5rem, 3.125rem);
+    transform: scale(1);
   }
   25% {
-    transform: scale(3) translate(3.125rem, 5rem);
+    transform: scale(2) translate(-0.625rem, 0.625rem);
   }
   50% {
-    transform: scale(4) translate(3.125rem, -2.5rem);
+    transform: scale(3) translate(-2.5rem, 3.125rem);
   }
   75% {
-    transform: scale(3) translate(-1.875rem, -0.9375rem);
+    transform: scale(2) translate(-1.25rem, -0.9375rem);
   }
   100% {
-    transform: scale(2) translate(-2.5rem, 3.125rem);
+    transform: scale(1);
   }
 }
 @keyframes tab {
@@ -913,7 +949,7 @@ img {
 
 /* intro */
 .intro__main {
-  margin: 9.3125rem 0 0 0;
+  padding: 9.3125rem 0 0 0;
   display: grid;
   align-items: center;
   grid-column-gap: 91px;

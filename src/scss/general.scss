@@ -20,19 +20,19 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
 
 @keyframes anim-intro-img {
   0% {
-    transform: scale(2) translate(rem(-40), rem(50));
+    transform: scale(1);
   }
   25% {
-    transform: scale(3) translate(rem(50), rem(80));
+    transform: scale(2) translate(rem(-10), rem(10));
   }
   50% {
-    transform: scale(4) translate(rem(50), rem(-40));
+    transform: scale(3) translate(rem(-40), rem(50));
   }
   75%{
-    transform: scale(3) translate(rem(-30), rem(-15));
+    transform: scale(2) translate(rem(-20), rem(-15));
   }
   100% {
-    transform: scale(2) translate(rem(-40), rem(50));
+    transform: scale(1);
   }
 }
 

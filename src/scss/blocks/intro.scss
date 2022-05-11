@@ -1,6 +1,6 @@
 .intro {
   &__main {
-    margin: rem(149) 0 0 0;
+    padding: rem(149) 0 0 0;
     display: grid;
     align-items: center;
     @include fit('grid-column-gap', 91, 30, 1);

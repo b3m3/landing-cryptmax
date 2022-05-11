@@ -5,6 +5,7 @@ import select from './modules/select.js';
 import slider from './lib/slider.js';
 import tabs from './modules/tabs.js';
 import animateImage from './modules/animate-image.js';
+import accoridon from './lib/accordion.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
@@ -16,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   select('.header-best__select-btn', '.header-best__select-item');
   tabs();
   animateImage();
+  accoridon(425);
 });
