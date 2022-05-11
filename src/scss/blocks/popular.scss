@@ -28,7 +28,16 @@
     display: grid;
     @include fit('grid-row-gap', 50, 20, 1);
     @include fit('grid-column-gap', 30, 20, 1);
-    grid-template-columns: repeat(auto-fit, minmax(rem(270), 1fr));
+    grid-template: auto / repeat(4, 1fr);
+    @include mq(rem(1100)) {
+      grid-template: auto / repeat(3, 1fr);
+    }
+    @include mq(rem(820)) {
+      grid-template: auto / repeat(2, 1fr);
+    }
+    @include mq(rem(550)) {
+      grid-template: auto / 1fr;
+    }
   }
 }
 
@@ -40,6 +49,8 @@
     gap: rem(10);
   }
   &__tabs-btn {
+    position: relative;
+    overflow: hidden;
     font-weight: 500;
     font-size: rem(14);
     line-height: rem(18);
@@ -48,11 +59,30 @@
     border-radius: rem(5);
     padding: rem(6) rem(14);
     background-color: transparent;
-    transition: .3s ease;
-    &.active {
+    transition: .3s;
+    & span {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      content: '';
+      width: 0;
+      height: 100%;
+      left: 0;
+      top: 0;
       background-color: $blue;
-      border: none;
+      transition: .3s ease-out;
+    }
+    &.active {
+      border: 1px solid $blue;
       color: #fff;
+
+      &::before {
+        width: 100%;
+      }
     }
   }
   &__filters {

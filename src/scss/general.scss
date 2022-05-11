@@ -18,6 +18,20 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
 
 //-----------------------------------------------------------------------
 
+@keyframes tab {
+  0% {
+    opacity: .3;
+    transform: scale(.96) translate(rem(-25));
+  }
+  99% {
+    opacity: .99;
+  }
+  100% {
+    transform: scale(1) translate(0);
+    opacity: 1;
+  }
+}
+
 .logo {
   & > a {
     display: inline-flex;
@@ -84,6 +98,7 @@ img {
 .item-card {
   display: grid;
   grid-template: minmax(auto, rem(330)) auto / 1fr;
+  animation: tab .6s ease-out;
   &__top {
     overflow: hidden;
     border-radius: rem(15);
@@ -228,4 +243,8 @@ img {
     border-radius: rem(5);
     padding: rem(5) rem(10);
   }
+}
+
+.hide-card {
+  display: none;
 }
