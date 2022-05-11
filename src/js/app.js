@@ -6,6 +6,7 @@ import slider from './lib/slider.js';
 import tabs from './modules/tabs.js';
 import animateImage from './modules/animate-image.js';
 import accoridon from './lib/accordion.js';
+import pageScrollEvents from './lib/pageScrollEvents.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   tabs();
   animateImage();
   accoridon(425);
+  pageScrollEvents();
 });
