@@ -1,0 +1,94 @@
+.hot {
+  &__main {
+    @include fit('padding-top', 89, 50, 1);
+    @include fit('padding-bottom', 100, 0, 1);
+  }
+  &__title {
+    @include fit('padding-bottom', 49, 30, 1);
+  }
+  &__body {
+    display: grid;
+    @include fit('gap', 30, 20, 1);
+    // grid-template: auto / repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+  }
+  &__item {
+    display: grid;
+    grid-template: minmax(auto, rem(370)) auto auto / 1fr;
+  }
+}
+
+.item-hot {
+  &__images {
+    display: grid;
+    gap: rem(10);
+    grid-template: repeat(3, 1fr) / minmax(auto, rem(270)) minmax(rem(90), auto);
+    @include mobile-l {
+      grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    }
+  }
+  &__images-img {
+    border-radius: rem(10);
+    overflow: hidden;
+    &:nth-child(1) {
+      border-radius: rem(15);
+      grid-row: 1 / 4;
+      @include mobile-l {
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+      }
+    }
+    &:nth-child(4) {
+      position: relative;
+      &::before {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: rem(20);
+        line-height: rem(26);
+        color: #FFFFFF;
+      }
+    }
+    &_1::before {
+      content: '+30';
+    }
+    &_2::before {
+      content: '+25';
+    }
+    &_3::before {
+      content: '+28';
+    }
+  }
+  &__subtitle {
+    font-family: 'Poppins';
+    font-weight: 600;
+    @include fit('font-size', 25, 16, 1);
+    @include fit('line-height', 38, 20, 1);
+    padding: rem(11) 0 rem(12) 0;
+    color: #000000;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: rem(9);
+  }
+  &__bottom-img {
+    overflow: hidden;
+    border-radius: 50%;
+    width: rem(25);
+    height: rem(25);
+  }
+  &__bottom-name {
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: rem(21);
+    & span {
+      font-weight: 400;
+      color: #888888;
+    }
+  }
+}
